@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">Currency</string>
     <string name="currency_list">Currency list</string>
+    <string name="cod">cod</string>
+    <string name="currency_name">Currency name</string>
+    <string name="currency_flag_image">currency flag image</string>
 </resources>
