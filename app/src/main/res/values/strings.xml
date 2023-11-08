@@ -4,4 +4,5 @@
     <string name="cod">cod</string>
     <string name="currency_name">Currency name</string>
     <string name="currency_flag_image">currency flag image</string>
+    <string name="currency_converter">Currency converter</string>
 </resources>
