@@ -1,4 +1,4 @@
-package com.example.currency.currency_flag_list
+package com.example.currency.currencн
 
 enum class CurrencyFlagList (
     val sign: String,

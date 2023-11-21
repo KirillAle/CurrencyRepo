@@ -2,7 +2,7 @@ package com.example.currency.currency_extention
 
 import androidx.annotation.StringRes
 import com.example.currency.R
-import com.example.currency.currency_flag_list.CurrencyFlagList
+import com.example.currency.currencн.CurrencyFlagList
 
 @StringRes
 fun CurrencyFlagList.stringRes(): Int {

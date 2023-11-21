@@ -1,9 +1,5 @@
 <resources>
     <string name="app_name">Currency</string>
-    <string name="currency_list">Currency list</string>
-    <string name="cod">cod</string>
-    <string name="currency_name">Currency name</string>
-    <string name="currency_flag_image">currency flag image</string>
     <string name="currency_converter">Currency converter</string>
     <string name="currency_name_aed">United Arab Emirates dirham</string>
     <string name="currency_name_afn">Afghan afghani</string>
@@ -171,5 +167,4 @@
     <string name="currency_name_zar">South African rand</string>
     <string name="currency_name_zmw">Zambian kwacha</string>
     <string name="currency_name_zwl">Zimbabwean dollar</string>
-    <string name="USD">USD</string>
 </resources>

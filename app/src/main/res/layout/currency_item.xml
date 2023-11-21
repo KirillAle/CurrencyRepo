@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:id="@+id/currency_item"
+<LinearLayout android:id="@+id/currency_item"
     android:layout_width="match_parent"
-    android:layout_height="50dp"
-    android:layout_marginHorizontal="10dp"
-    android:layout_marginTop="10dp"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="12dp"
+    android:layout_marginTop="12dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <ImageView
         android:id="@+id/currency_flag"
-        android:layout_width="55dp"
-        android:layout_height="40dp"
+        android:layout_width="52dp"
+        android:layout_height="36dp"
         android:layout_gravity="center_vertical|start"
         android:gravity="center"
-        android:textSize="35sp"
-        android:contentDescription="@string/currency_flag_image">
+        tools:text="Flag">
     </ImageView>
 
     <TextView
         android:id="@+id/currency_name"
-        android:layout_width="250dp"
         android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_gravity="center_vertical"
         android:ellipsize="marquee"
         android:focusable="true"
         android:focusableInTouchMode="true"
         android:marqueeRepeatLimit="marquee_forever"
-        android:paddingStart="10dp"
-        android:paddingTop="9dp"
+        android:paddingTop="8dp"
         android:singleLine="true"
-        android:text="@string/currency_name_usd"
+        tools:text="Currency name"
         android:textSize="24sp" />
     <TextView
-        android:layout_width="10dp"
+        android:layout_width="12dp"
         android:layout_height="match_parent"/>
 
     <TextView
         android:id="@+id/currency_cod"
         android:layout_width="wrap_content"
-        android:layout_height="50dp"
+        android:layout_height="52dp"
         android:layout_gravity="center_vertical|end"
-        android:text="@string/USD"
-        android:textSize="20sp"
+        tools:text="USD"
+        android:textSize="24sp"
         android:paddingTop="12dp">
 
     </TextView>
