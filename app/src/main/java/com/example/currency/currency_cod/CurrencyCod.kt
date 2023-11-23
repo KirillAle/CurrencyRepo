@@ -1,8 +1,8 @@
-package com.example.currency.currencн
+package com.example.currency.currency_cod
 
-enum class CurrencyFlagList (
+enum class CurrencyCod (
     val sign: String,
-    val flag: String
+    val flag: String,
     ) {
         AED("د.إ", "🇦🇪"),
         AFN("؋", "🇦🇫"),
@@ -174,4 +174,5 @@ enum class CurrencyFlagList (
         companion object {
             val asList = values().asList()
         }
+    var flagUrl = "https://github.com/Lissy93/currency-flags/blob/master/assets/flags_png_rectangle/${name.lowercase()}.png?raw=true"
     }

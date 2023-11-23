@@ -5,7 +5,7 @@ import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.currency.adapret.CurrencyAdapter
-import com.example.currency.currencн.CurrencyFlagList
+import com.example.currency.currency_cod.CurrencyCod
 
 
 class MainActivity() : AppCompatActivity(){
@@ -14,7 +14,7 @@ class MainActivity() : AppCompatActivity(){
         setContentView(R.layout.currency_item_list)
 
         val recyclerView: RecyclerView = findViewById(R.id.currency_list_view)
-        val currencyList: List<CurrencyFlagList> = CurrencyFlagList.asList
+        val currencyList: List<CurrencyCod> = CurrencyCod.asList
 
         val layoutManager = LinearLayoutManager(this)
         val adapter = CurrencyAdapter()

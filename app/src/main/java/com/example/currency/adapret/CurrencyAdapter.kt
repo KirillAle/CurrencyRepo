@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 
 import com.example.currency.R
-import com.example.currency.currencн.CurrencyFlagList
+import com.example.currency.currency_cod.CurrencyCod
 import com.example.currency.view_holder.CurrencyViewHolder
 
 class CurrencyAdapter: RecyclerView.Adapter<CurrencyViewHolder>(){
@@ -15,13 +15,14 @@ class CurrencyAdapter: RecyclerView.Adapter<CurrencyViewHolder>(){
     }
 
     override fun getItemCount(): Int {
-        return CurrencyFlagList.asList.size
+        return CurrencyCod.asList.size
     }
 
     override fun onBindViewHolder(holder: CurrencyViewHolder, position: Int) {
-        val currency = CurrencyFlagList.asList[position]
+        val currency = CurrencyCod.asList[position]
         holder.bind(currency)
 
 
     }
+
 }

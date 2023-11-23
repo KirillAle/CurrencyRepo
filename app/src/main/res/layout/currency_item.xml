@@ -21,6 +21,8 @@
         android:layout_height="match_parent"
         android:layout_width="0dp"
         android:layout_weight="1"
+        android:layout_marginStart="4dp"
+        android:layout_marginEnd="8dp"
         android:layout_gravity="center_vertical"
         android:ellipsize="marquee"
         android:focusable="true"
@@ -30,9 +32,7 @@
         android:singleLine="true"
         tools:text="Currency name"
         android:textSize="24sp" />
-    <TextView
-        android:layout_width="12dp"
-        android:layout_height="match_parent"/>
+
 
     <TextView
         android:id="@+id/currency_cod"
