@@ -3,9 +3,7 @@ package com.example.currency.adapret
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
 import coil.load
-
 import com.example.currency.R
 import com.example.currency.currency_extention.stringRes
 import com.example.currency.currency_flag_list.CurrencyFlagList
@@ -30,6 +28,5 @@ class CurrencyAdapter: RecyclerView.Adapter<CurrencyViewHolder>(){
         holder.flagImageView.load(flagUrl)
         holder.nameTextView.setText(stringResId)
         holder.codTextView.text = currency.name
-
     }
 }

@@ -172,4 +172,6 @@
     <string name="currency_name_zmw">Zambian kwacha</string>
     <string name="currency_name_zwl">Zimbabwean dollar</string>
     <string name="USD">USD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
