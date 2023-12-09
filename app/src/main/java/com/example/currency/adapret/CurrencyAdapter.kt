@@ -23,7 +23,7 @@ class CurrencyAdapter: RecyclerView.Adapter<CurrencyViewHolder>(){
         val currency = CurrencyFlagList.asList[position]
         val stringResId = currency.stringRes()
 
-        val flagUrl = "https://raw.githubusercontent.com/Lissy93/currency-flags/master/assets/flags_png_rectangle/all.png"
+        val flagUrl = "https://raw.githubusercontent.com/Lissy93/currency-flags/master/assets/flags_png_rectangle/${currency.name.lowercase()}.png"
 
         holder.flagImageView.load(flagUrl)
         holder.nameTextView.setText(stringResId)

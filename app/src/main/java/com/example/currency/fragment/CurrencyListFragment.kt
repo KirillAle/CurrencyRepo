@@ -15,7 +15,7 @@ import com.example.currency.currency_flag_list.CurrencyFlagList
 class CurrencyListFragment : Fragment() {
 
     private lateinit var recyclerView: RecyclerView
-//    val currencyList: List<CurrencyFlagList> = CurrencyFlagList.asList
+
 
     private val layoutManager = LinearLayoutManager(context)
     private val adapter = CurrencyAdapter()
