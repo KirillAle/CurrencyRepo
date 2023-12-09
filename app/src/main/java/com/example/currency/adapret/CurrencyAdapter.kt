@@ -3,7 +3,6 @@ package com.example.currency.adapret
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-
 import com.example.currency.R
 import com.example.currency.currency_cod.CurrencyCod
 import com.example.currency.view_holder.CurrencyViewHolder
@@ -21,8 +20,5 @@ class CurrencyAdapter: RecyclerView.Adapter<CurrencyViewHolder>(){
     override fun onBindViewHolder(holder: CurrencyViewHolder, position: Int) {
         val currency = CurrencyCod.asList[position]
         holder.bind(currency)
-
-
     }
-
 }

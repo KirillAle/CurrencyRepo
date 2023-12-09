@@ -6,23 +6,13 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.currency.adapret.CurrencyAdapter
 import com.example.currency.currency_cod.CurrencyCod
+import com.example.currency.fragment.CurrencyListFragment
 
 
-class MainActivity() : AppCompatActivity(){
+class MainActivity() : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.currency_item_list)
-
-        val recyclerView: RecyclerView = findViewById(R.id.currency_list_view)
-        val currencyList: List<CurrencyCod> = CurrencyCod.asList
-
-        val layoutManager = LinearLayoutManager(this)
-        val adapter = CurrencyAdapter()
-
-        recyclerView.layoutManager = layoutManager
-        recyclerView.adapter = adapter
-
-
+        setContentView(R.layout.activity_main)
     }
 }
 

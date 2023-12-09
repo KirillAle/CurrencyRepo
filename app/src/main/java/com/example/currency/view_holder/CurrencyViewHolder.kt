@@ -8,7 +8,6 @@ import coil.load
 import com.example.currency.R
 import com.example.currency.currency_extention.stringRes
 import com.example.currency.currency_cod.CurrencyCod
-import java.lang.System.load
 
 class CurrencyViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
 
@@ -18,7 +17,6 @@ class CurrencyViewHolder (itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind (currency: CurrencyCod) {
 
             val stringResId = currency.stringRes()
-
 
             flagImageView.load(currency.flagUrl)
             nameTextView.setText(stringResId)
