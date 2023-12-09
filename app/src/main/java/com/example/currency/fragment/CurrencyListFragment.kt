@@ -9,8 +9,6 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.currency.R
 import com.example.currency.adapret.CurrencyAdapter
-import com.example.currency.currency_flag_list.CurrencyFlagList
-
 
 class CurrencyListFragment : Fragment() {
 
