@@ -5,8 +5,8 @@ import com.example.currency.currency_cod.CurrencyCod
 
 
 class SelectCurrencyViewModel() : ViewModel() {
-    private var selectedCurrency: String = ""
+    private lateinit var currencyCod: CurrencyCod
     fun setSelectedCurrency(currencyCod: CurrencyCod) {
-        selectedCurrency = currencyCod.toString()
+       this.currencyCod = currencyCod
     }
 }
