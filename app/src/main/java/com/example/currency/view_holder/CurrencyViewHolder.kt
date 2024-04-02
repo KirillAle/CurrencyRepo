@@ -23,7 +23,6 @@ class CurrencyViewHolder(private val listener: OnCurrencyClickListener, itemView
     fun bind(currency: CurrencyCod) {
 
         val stringResId = currency.stringRes()
-        val view: View = itemView.findViewById(R.id.currency_item)
 
 
         flagImageView.load(currency.flagUrl)
@@ -33,13 +32,9 @@ class CurrencyViewHolder(private val listener: OnCurrencyClickListener, itemView
         itemView.setOnClickListener(object: View.OnClickListener {
             override fun onClick(view: View) {
                 listener.onCurrencyClick(currency)
-//                println(currency.name)
             }
         })
 
-//        itemClick.setOnClickListener {
-//            SelectCurrencyViewModel().setSelectedCurrency(currency)
-//            Toast.makeText(itemView.context, "${currency.name} нажата!", Toast.LENGTH_SHORT).show()
     }
 }
 

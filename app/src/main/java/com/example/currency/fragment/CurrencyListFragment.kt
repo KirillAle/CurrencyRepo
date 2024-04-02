@@ -16,7 +16,7 @@ import com.example.currency.view_model.SelectCurrencyViewModel
 class CurrencyListFragment : Fragment(R.layout.fragment_currency_list) {
 
 
-    private val viewModel = SelectCurrencyViewModel()
+    private val viewModel: SelectCurrencyViewModel by viewModels()
     private lateinit var recyclerView: RecyclerView
     private val layoutManager = LinearLayoutManager(context)
     private val adapter = CurrencyAdapter(object : OnCurrencyClickListener{
