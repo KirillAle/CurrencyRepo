@@ -1,6 +1,8 @@
 package com.example.currency.fragment
 
+import android.content.Context
 import android.os.Bundle
+import android.provider.Settings.Global.putString
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.viewModels
@@ -18,12 +20,15 @@ class CurrencyListFragment : Fragment(R.layout.fragment_currency_list) {
     private lateinit var recyclerView: RecyclerView
     private val layoutManager = LinearLayoutManager(context)
     private val adapter: (CurrencyCod) -> Unit = {currencyCod ->
-            viewModel.setSelectedCurrency(currencyCod)}
+            viewModel.setSelectedCurrency(currencyCod)
+    saveData()
+    }
 
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
 
         recyclerView = view.findViewById(R.id.currency_list_view)
         recyclerView.layoutManager = layoutManager
@@ -33,5 +38,17 @@ class CurrencyListFragment : Fragment(R.layout.fragment_currency_list) {
     private fun handleCurrencyItemClick(currency: CurrencyCod) {
         viewModel.setSelectedCurrency(currency)
     }
+
+
+    private fun saveData() {
+        val selectedCurrency = viewModel.getSelectedCurrency()
+        val sharedPreferences = activity?.getSharedPreferences("currency_prefs", Context.MODE_PRIVATE) ?: return
+        sharedPreferences
+            .edit()
+            .putString("selected_currency", selectedCurrency.name)
+            .apply()
+
+    }
+
 
 }

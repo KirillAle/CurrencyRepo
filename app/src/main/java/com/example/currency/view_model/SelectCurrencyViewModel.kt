@@ -8,5 +8,10 @@ class SelectCurrencyViewModel() : ViewModel() {
     private lateinit var currencyCod: CurrencyCod
     fun setSelectedCurrency(currencyCod: CurrencyCod) {
        this.currencyCod = currencyCod
+        println(currencyCod)
+    }
+
+    fun getSelectedCurrency(): CurrencyCod {
+        return currencyCod
     }
 }
