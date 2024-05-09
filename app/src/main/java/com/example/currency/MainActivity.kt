@@ -11,13 +11,19 @@ class MainActivity() : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+
         val fragmentManager = supportFragmentManager
         val fragmentTransition = fragmentManager.beginTransaction()
         val currencyListFragment = CurrencyListFragment()
+
+        currencyListFragment.setArgument(currencyListFragment.OUT_KEY)
+
+
         fragmentTransition.replace(R.id.currency_list_view_fragment_container, currencyListFragment)
         fragmentTransition.commit()
-
     }
+
 
 
 
