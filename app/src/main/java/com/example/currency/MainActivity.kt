@@ -3,6 +3,7 @@ package com.example.currency
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.FragmentManager
+import com.example.currency.enum_classes.InOutCurrencyType
 import com.example.currency.fragment.CurrencyListFragment
 
 
@@ -15,7 +16,8 @@ class MainActivity() : AppCompatActivity() {
 
         val fragmentManager = supportFragmentManager
         val fragmentTransition = fragmentManager.beginTransaction()
-        val currencyListFragment = CurrencyListFragment()
+        val currencyListFragment = CurrencyListFragment(InOutCurrencyType.IN)
+
 
         currencyListFragment.setArgument(currencyListFragment.OUT_KEY)
 
