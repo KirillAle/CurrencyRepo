@@ -14,16 +14,20 @@ class MainActivity() : AppCompatActivity() {
 
 
 
+
+
         val fragmentManager = supportFragmentManager
         val fragmentTransition = fragmentManager.beginTransaction()
-        val currencyListFragment = CurrencyListFragment(InOutCurrencyType.IN)
+        val currencyListFragment = CurrencyListFragment.create(InOutCurrencyType.OUT, 123)
 
 
-        currencyListFragment.setArgument(currencyListFragment.OUT_KEY)
 
 
-        fragmentTransition.replace(R.id.currency_list_view_fragment_container, currencyListFragment)
-        fragmentTransition.commit()
+
+
+        fragmentTransition
+            .replace(R.id.currency_list_view_fragment_container, currencyListFragment)
+            .commit()
     }
 
 
