@@ -11,16 +11,13 @@ import com.example.currency.currency_cod.CurrencyCod
 
 class CurrencyViewHolder(itemView: View, private val onCurrencyClick:(CurrencyCod) -> Unit) : RecyclerView.ViewHolder(itemView) {
 
-
     var flagImageView: ImageView = itemView.findViewById(R.id.currency_flag)
     private val nameTextView: TextView = itemView.findViewById(R.id.currency_name)
     private val codTextView: TextView = itemView.findViewById(R.id.currency_cod)
 
-
     fun bind(currency: CurrencyCod) {
 
         val stringResId = currency.stringRes()
-
 
         flagImageView.load(currency.flagUrl)
         nameTextView.setText(stringResId)
@@ -31,7 +28,6 @@ class CurrencyViewHolder(itemView: View, private val onCurrencyClick:(CurrencyCo
                 onCurrencyClick(currency)
             }
         })
-
     }
 }
 
