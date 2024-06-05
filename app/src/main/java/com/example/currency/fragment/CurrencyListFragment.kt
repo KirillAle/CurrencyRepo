@@ -21,14 +21,10 @@ class CurrencyListFragment() :
     Fragment(R.layout.fragment_currency_list) {
 
     companion object {
-
-        private const val INT_KEY_ARGUMENT = "int argument"
         private const val OUT_KEY = "out key"
-
-        fun create(type: InOutCurrencyType, intArgument: Int): Fragment {
+        fun create(type: InOutCurrencyType): Fragment {
             val fragment = CurrencyListFragment()
             val bundle = Bundle()
-            bundle.putInt(INT_KEY_ARGUMENT, intArgument)
             bundle.putString(OUT_KEY, type.name)
             fragment.arguments = bundle
             return fragment
@@ -54,7 +50,6 @@ class CurrencyListFragment() :
         recyclerView = view.findViewById(R.id.currency_list_view)
         recyclerView.layoutManager = layoutManager
         recyclerView.adapter = CurrencyAdapter(adapter)
-
     }
 
     private fun handleCurrencyItemClick(currency: CurrencyCod) {
@@ -68,10 +63,8 @@ class CurrencyListFragment() :
 
         val sharedPreferences =
             activity?.getSharedPreferences("currency_prefs", Context.MODE_PRIVATE) ?: return
-
         val key = if (currencyType == InOutCurrencyType.IN)
             "selected_currencyIn" else "selected_currencyOut"
-
         sharedPreferences
             .edit()
             .putString(key, selectedCurrencyCod.name)
