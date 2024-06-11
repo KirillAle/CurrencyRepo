@@ -1,6 +1,7 @@
 package com.example.currency.fragment
 
 import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.provider.Settings.Global.putInt
 import android.provider.Settings.Global.putString
@@ -17,13 +18,18 @@ import com.example.currency.currency_cod.CurrencyCod
 import com.example.currency.enum_classes.InOutCurrencyType
 import com.example.currency.view_model.SelectCurrencyViewModel
 
-class CurrencyListFragment() :
-    Fragment(R.layout.fragment_currency_list) {
+class CurrencyListFragment(
+    private val viewModel: SelectCurrencyViewModel,
+    private val sharedPreferences: SharedPreferences
+    ): Fragment(R.layout.fragment_currency_list) {
 
     companion object {
         private const val OUT_KEY = "out key"
-        fun create(type: InOutCurrencyType): Fragment {
-            val fragment = CurrencyListFragment()
+        fun create(
+            type: InOutCurrencyType,
+            viewModel: SelectCurrencyViewModel,
+            sharedPreferences: SharedPreferences): Fragment {
+            val fragment = CurrencyListFragment(viewModel, sharedPreferences)
             val bundle = Bundle()
             bundle.putString(OUT_KEY, type.name)
             fragment.arguments = bundle
@@ -31,7 +37,7 @@ class CurrencyListFragment() :
         }
     }
 
-    private val viewModel: SelectCurrencyViewModel by viewModels()
+//    private val viewModel: SelectCurrencyViewModel by viewModels()
     private lateinit var recyclerView: RecyclerView
     private val layoutManager = LinearLayoutManager(context)
     private val adapter: (CurrencyCod) -> Unit = { currencyCod ->
@@ -61,8 +67,8 @@ class CurrencyListFragment() :
         currencyType: InOutCurrencyType
     ) {
 
-        val sharedPreferences =
-            activity?.getSharedPreferences("currency_prefs", Context.MODE_PRIVATE) ?: return
+//        val sharedPreferences =
+//            activity?.getSharedPreferences("currency_prefs", Context.MODE_PRIVATE) ?: return
         val key = if (currencyType == InOutCurrencyType.IN)
             "selected_currencyIn" else "selected_currencyOut"
         sharedPreferences
